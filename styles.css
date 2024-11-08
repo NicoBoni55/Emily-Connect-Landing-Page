@@ -1,0 +1,350 @@
+:root {
+    --background-color: #fff;
+    --text-color-primary: #000;
+    --text-color-secondary: #333;
+    --font-family: "Outfit";
+    --botton-color-primary: #2C6DFE;
+    --text-hover-botton: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/fondo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    transition: background-image 0.5s ease-in-out;
+}
+
+body.background1 {
+    background-image: url('images/background/fondo1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+body.background2 {
+    background-image: url('images/background/fondo2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.logo img {
+    margin-left: 10px;
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+nav {
+    font-family: var(--font-family);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 3vh;
+    background-color: var(--background-color);
+    border-bottom: 0.5px solid #000;
+    height: min-content;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 60px; 
+}
+
+
+.text-and-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.text {
+    max-width: 50%;
+}
+
+h1 {
+    display: grid;
+    font-size: 4rem;
+    font-family: var(--font-family);
+    color: var(--text-color-primary);
+    margin-bottom: 30px;
+}
+
+button {
+    font-family: var(--font-family);
+    font-size: 1.3rem;
+    padding: 20px 25px;
+    background-color: var(--background-color);
+    color: var(--botton-color-primary);
+    border-radius: 5px;
+    cursor: pointer;
+    border-color: var(--botton-color-primary);
+    border-style: solid;
+    box-shadow: 2 0 1 10px var(--botton-color-primary);
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--botton-color-primary);
+    color: var(--text-hover-botton);
+}
+
+p {
+    font-size: 2rem;
+}
+
+.phone {
+    width: 350px; 
+    height: auto;
+    margin-right: 30px;
+}
+
+.About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 4px;
+    margin-top: -50px; 
+}
+
+.About .text {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.About h1 {
+    font-size: 2rem;
+    font-family: var(--font-family);
+    color: #000;
+    margin-top: 5px;
+}
+
+.About p {
+    margin-top: 2px;
+    color: #000;
+    font-family: var(--font-family);
+    font-size: 1.1rem;
+}
+
+.team-title {
+    display: flex;
+    justify-content: center;
+   text-align: center;
+   font-size: 3rem;
+   margin-top: 50px;
+   color: var(--text-color-primary);
+   width: 100%;
+}
+
+.Team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px;
+    width: 100%;
+}
+
+.Team .card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #333;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    z-index: 500;
+}
+
+.Team .card:hover {
+    transform: scale(1.1);
+    z-index: 500;
+}
+
+.Team .card img.profile1,
+.Team .card img.profile2,
+.Team .card img.profile3,
+.Team .card img.profile4 {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease-in-out, content 0.3s ease-in-out;
+}
+
+.Team .card img.profile1:hover {
+    content: url('images/team/hover/teamh1.jpg');
+    scale: 1.1;
+}
+
+.Team .card img.profile2:hover {
+    content: url('images/team/hover/teamh2.jpg');
+    scale: 1.1;
+}
+
+.Team .card img.profile3:hover {
+    content: url('images/team/hover/teamh3.jpg');
+    scale: 1.1;
+}
+
+.Team .card img.profile4:hover {
+    content: url('images/team/hover/teamh4.jpg');
+    scale: 1.1;
+}
+
+.Team .card h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.Team .card h2 .top-text {
+    font-size: 1.5rem;
+    color: var(--text-color-primary);
+}
+
+.Team .card h2 .bottom-text {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--text-color-primary);
+    margin: 5px;
+}
+
+.Team .card h3 {
+    font-size: 1.2rem;
+    color: var(--text-color-primary);
+    margin: 5px 0;
+}
+
+.Team .card img.qr {
+    width: 140px; 
+    height: 140px; 
+    margin-top: 20px;
+    border-radius: 0;
+}
+
+@media (max-width: 1200px) {
+    .phone {
+        margin-right: 0;
+        margin-top: 50px;
+        width: 350px; 
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .phone {
+        width: 200px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .text-and-image {
+        flex-direction: column;
+        align-self: center;
+    }
+
+    p {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        font-size: 1.3rem;
+    }
+
+
+    h1 {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        font-size: 2rem;
+    }
+
+    button {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .phone {
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 0.6rem;
+        padding: 6px 10px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .phone {
+        display: none; 
+    }
+}
